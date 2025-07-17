@@ -6,28 +6,44 @@ import { ExternalLink, Github } from "lucide-react";
 const Projects = () => {
   const projects = [
     {
-      title: "E-Commerce Platform",
-      description: "A full-stack e-commerce solution with React, Node.js, and PostgreSQL. Features include user authentication, payment processing, and admin dashboard.",
-      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=500&h=300&fit=crop",
-      technologies: ["React", "Node.js", "PostgreSQL", "Stripe", "Tailwind CSS"],
+      title: "📝 To-Do List",
+      description: "A simple and interactive task management web app that lets users add, delete, and mark tasks as completed. Uses local storage to retain tasks across sessions.",
+      image: "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=500&h=300&fit=crop",
+      technologies: ["HTML", "CSS", "JavaScript", "LocalStorage"],
       liveUrl: "#",
+      githubUrl: "https://github.com/Sweetsmile4/To-Do-List"
+    },
+    {
+      title: "🤖 AI Blog Generator",
+      description: "A full-stack AI-powered web app that converts YouTube video links into blog posts. Uses AssemblyAI for transcription and OpenAI for generating blog content.",
+      image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=500&h=300&fit=crop",
+      technologies: ["Node.js", "Express.js", "MySQL", "OpenAI API", "AssemblyAI"],
+      liveUrl: "#",
+      githubUrl: "https://github.com/Sweetsmile4/AI_Blog_generator"
+    },
+    {
+      title: "🌦️ Weather App",
+      description: "A user-friendly app that fetches and displays real-time weather data (temperature, humidity, and sky conditions) for any city using the OpenWeatherMap API.",
+      image: "https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?w=500&h=300&fit=crop",
+      technologies: ["HTML", "CSS", "JavaScript", "OpenWeatherMap API"],
+      liveUrl: "#",
+      githubUrl: "https://github.com/Sweetsmile4/Weather-App"
+    },
+    {
+      title: "🎨 Nike Shoe Product Page",
+      description: "A modern, e-commerce shoe product page designed in Figma. Emphasizes brand identity, user engagement, and clean layout with clickable UI elements.",
+      image: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500&h=300&fit=crop",
+      technologies: ["Figma", "UI/UX Design", "Prototyping"],
+      liveUrl: "https://www.figma.com/design/sS2ypmhZkYMfi7ckSbBBaD/Nike-Shoe?node-id=0-1&t=0pcHeIbBKh6cAWZB-1",
       githubUrl: "#"
     },
     {
-      title: "Task Management App",
-      description: "A collaborative project management tool with real-time updates, drag-and-drop functionality, and team collaboration features.",
-      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=500&h=300&fit=crop",
-      technologies: ["Vue.js", "Express.js", "MongoDB", "Socket.io", "SCSS"],
+      title: "💊 Calyte – Drug Addiction Awareness",
+      description: "A conceptual social impact project aimed at raising awareness and offering support for drug addiction. Designed to provide education and community resources.",
+      image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?w=500&h=300&fit=crop",
+      technologies: ["HTML/CSS", "JavaScript", "Figma", "Social Impact Design"],
       liveUrl: "#",
-      githubUrl: "#"
-    },
-    {
-      title: "Weather Dashboard",
-      description: "A responsive weather application with location-based forecasts, interactive charts, and personalized weather alerts.",
-      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=500&h=300&fit=crop",
-      technologies: ["TypeScript", "React", "Chart.js", "OpenWeather API", "PWA"],
-      liveUrl: "#",
-      githubUrl: "#"
+      githubUrl: "https://github.com/theia13/Calyte"
     }
   ];
 
@@ -79,21 +95,31 @@ const Projects = () => {
                 </div>
 
                 <div className="flex gap-3">
-                  <Button 
-                    variant="default" 
-                    size="sm" 
-                    className="flex-1 shadow-elegant hover:shadow-glow transition-all duration-300"
-                  >
-                    <ExternalLink className="mr-2 h-4 w-4" />
-                    Live Demo
-                  </Button>
-                  <Button 
-                    variant="outline" 
-                    size="sm" 
-                    className="hover:bg-primary hover:text-primary-foreground transition-all duration-300"
-                  >
-                    <Github className="h-4 w-4" />
-                  </Button>
+                  {project.liveUrl !== "#" && (
+                    <Button 
+                      variant="default" 
+                      size="sm" 
+                      className="flex-1 shadow-elegant hover:shadow-glow transition-all duration-300"
+                      asChild
+                    >
+                      <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+                        <ExternalLink className="mr-2 h-4 w-4" />
+                        Live Demo
+                      </a>
+                    </Button>
+                  )}
+                  {project.githubUrl !== "#" && (
+                    <Button 
+                      variant="outline" 
+                      size="sm" 
+                      className="hover:bg-primary hover:text-primary-foreground transition-all duration-300"
+                      asChild
+                    >
+                      <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                        <Github className="h-4 w-4" />
+                      </a>
+                    </Button>
+                  )}
                 </div>
               </CardContent>
             </Card>

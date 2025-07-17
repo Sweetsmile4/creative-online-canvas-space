@@ -13,10 +13,10 @@ const Hero = () => {
       <div className="container mx-auto px-6 text-center relative z-10">
         <div className="animate-fade-in">
           <h1 className="text-5xl md:text-7xl font-bold bg-gradient-primary bg-clip-text text-transparent mb-6">
-            John Developer
+            Madhusmita Talukdar
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground mb-4 animate-slide-in-left" style={{ animationDelay: '0.2s' }}>
-            Full Stack Developer & UI/UX Enthusiast
+            Full Stack Developer & UI/UX Designer
           </p>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8 animate-slide-in-left" style={{ animationDelay: '0.4s' }}>
             Creating beautiful, functional web applications with modern technologies. 
