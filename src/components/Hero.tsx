@@ -34,13 +34,13 @@ const Hero = () => {
           </div>
 
           <div className="flex justify-center gap-6 animate-scale-in" style={{ animationDelay: '0.8s' }}>
-            <a href="#" className="text-muted-foreground hover:text-primary transition-colors duration-300 hover:scale-110 transform">
+            <a href="https://github.com/Sweetsmile4" className="text-muted-foreground hover:text-primary transition-colors duration-300 hover:scale-110 transform">
               <Github className="h-6 w-6" />
             </a>
-            <a href="#" className="text-muted-foreground hover:text-primary transition-colors duration-300 hover:scale-110 transform">
+            <a href="www.linkedin.com/in/madhusmita-talukdar-531964268" className="text-muted-foreground hover:text-primary transition-colors duration-300 hover:scale-110 transform">
               <Linkedin className="h-6 w-6" />
             </a>
-            <a href="#" className="text-muted-foreground hover:text-primary transition-colors duration-300 hover:scale-110 transform">
+            <a href="madhusmita2003@outlook.com" className="text-muted-foreground hover:text-primary transition-colors duration-300 hover:scale-110 transform">
               <Mail className="h-6 w-6" />
             </a>
           </div>
